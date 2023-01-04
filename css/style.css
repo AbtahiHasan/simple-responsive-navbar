@@ -1,4 +1,3 @@
-/* don't remove this link other wise your logo is look very bad  */
 @font-face {
   font-family: Poppins;
   src: url("../fonts/Poppins-Regular.ttf");
@@ -10,160 +9,70 @@
   font-family: Poppins;
 }
 :root {
-  --white: #ffffff;
-  --box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1),
-    -5px -5px 10px rgba(0, 0, 0, 0.4);
-  --primary-color: #228bcc;
-  --black-color: #2c3e50;
-  --nav-bg: #325ca4;
+  --nav-bg: #0275dd;
+  --text-color: #ffffff;
+  --link-color: #34495e;
 }
-#header {
-  background: url("../image/background.jpg");
+body {
+  background-image: url("../images/bg.jpg");
   background-size: cover;
-  height: 100vh;
-  z-index: 1;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
-.container {
+.header {
+  width: 100%;
+  background: var(--text-color);
+}
+.header .container {
   max-width: 1140px;
   width: 100%;
   margin: auto;
-}
-.nav-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo img {
+  height: 50px;
+  width: 50px;
+}
+.header .logo label {
+  font-size: 45px;
+  font-weight: bolder;
+  color: var(--link-color);
 }
 .navbar {
-  background: transparent;
-  box-shadow: var(--box-shadow);
-  position: relative;
-  z-index: 2;
-  width: 100%;
-}
-.navbar::before {
-  content: "";
-  background: var(--nav-bg);
-  box-shadow: var(--box-shadow);
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0.5;
-  filter: blur(50px);
-  -webkit-filter: blur(50px);
-  z-index: 1;
-  border: 2px solid var(--primary-color);
-}
-.navbar .container {
   display: flex;
+  align-items: center;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  margin: auto;
-  padding: 0 30px;
 }
-.navbar .container .logo {
+.navbar ul li {
+  list-style: none;
+  padding: 10px 20px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-size: 25px;
+}
+.navbar ul li:hover {
+  background: var(--nav-bg);
+}
+.navbar ul li:hover a {
+  color: var(--text-color);
+}
+.toggle-bar {
   display: flex;
   align-items: center;
-}
-.navbar .container .logo img {
-  width: 50px;
-  height: 50px;
-}
-.navbar .container .logo label {
-  font-size: 50px;
-  font-family: Poppins;
-  font-weight: 900;
-  color: var(--white);
-}
-.navbar .container .navlinks ul {
-  list-style: none;
-}
-.navbar .container .navlinks ul li {
-  display: inline;
-  margin: 10px;
-}
-.navbar .container .navlinks ul li a {
-  text-decoration: none;
-  color: var(--white);
-}
-.navbar .container .navlinks ul li:hover a {
-  color: var(--black-color);
-}
-.navbar .container .navlinks ul li.active {
-  background: var(--primary-color);
-  padding: 10px 20px;
-  border-radius: 10px;
-}
-.navbar .container .navlinks ul li.active a {
-  color: var(--white);
-}
-.navbar .container .contact-btn a {
-  background: var(--primary-color);
-  border-radius: 30px;
-  padding: 15px 30px;
-  color: var(--white);
-  border: none;
-  text-decoration: none;
-}
-.toggle {
   display: none;
-}
-@media (max-width: 900px) {
-  .navbar .container .logo label {
-    display: none;
-  }
-  .navbar .container {
-    padding: 10px 20px;
-  }
-}
-@media (max-width: 750px) {
-  .navbar {
-    height: 70px;
-    position: relative;
-  }
-  .nav-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 200px;
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
-    display: none;
-  }
-  .nav-content .navlinks ul li a {
-    display: block;
-  }
-  .nav-content .navlinks ul li.active {
-    background: none;
-    border-bottom: 2px solid var(--primary-color);
-  }
-  #header.active {
-    background: var(--black-color);
-  }
-  #header.active .nav-content {
-    display: block;
-  }
-  .toggle {
-    background: var(--primary-color);
-    border: none;
-    display: block;
-    background: var(--primary-color);
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--white);
-  }
-  .toggle .toggle-icon {
-    color: var(--white);
-  }
-}
-@media (max-width: 650px) {
-  .toggle .toggle-icon {
-    color: var(--white);
-  }
 }

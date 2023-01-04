@@ -1,6 +1,7 @@
-// select elements
-let toggleBtn = document.getElementById("toggle"),
-header = document.getElementById("header");
- toggleBtn.onclick = () => {
-    header.classList.toggle("active");
- }
+//select elements
+let navlink = document.querySelector(".navlink");
+let toggleBar = document.querySelector(".toggle-bar");
+
+toggleBar.onclick = function(){
+    navlink.classList.toggle("active");
+}

@@ -4,42 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>simple resposive navbar</title>
-    <link rel="icon" type="image/x-icon" href="image/logo/logo.png" />
+    <title>Responsive Drop Down Manu</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
-    <header id="header">
-      <nav class="navbar">
-        <div class="container">
-          <div class="logo">
-            <!-- make sure your logo icon is square  -->
-            <img src="image/logo/logo.png" />
-            <!-- enter your company name  -->
-            <label>logo</label>
-          </div>
-          <button
-            id="toggle"
-            class="toggle fa-solid fa-bars toggle-icon"
-          ></button>
-          <div class="nav-content">
-            <div class="navlinks">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">blog</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">About</a></li>
-              </ul>
-            </div>
-            <div class="contact-btn"><a href="#">Contact</a></div>
-          </div>
+    <!-- header section  -->
+    <header class="header">
+      <section class="container">
+        <div class="logo">
+          <a href="#"><img src="images/logo/logo.png" /><label>Logo</label></a>
         </div>
-      </nav>
+        <nav class="navbar">
+          <ul class="navlink">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+        <div class="toggle-bar"><i class="fa-solid fa-bars"></i></div>
+      </section>
     </header>
     <script src="js/script.js"></script>
   </body>
